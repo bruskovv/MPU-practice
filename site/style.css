@@ -1,0 +1,171 @@
+body {
+  font-family: 'Montserrat', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f6f8fa;
+  color: #24292e;
+  line-height: 1.6;
+  font-size: 16px;
+}
+
+main {
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+/* Основной контент */
+article {
+  flex: 1 1 600px;
+  background: white;
+  padding: 1.5rem 2rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  transition: box-shadow 0.3s ease;
+  font-size: 1rem;
+}
+
+article:hover {
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+article section {
+  margin-bottom: 2rem;
+}
+
+article section h2,
+article section h3 {
+  color: #0969da;
+  margin-top: 0;
+}
+
+/* Изображения */
+article section img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 6px;
+  margin: 1rem 0;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+}
+
+/* Блок с заголовками справа, увеличен масштаб */
+aside {
+  flex: 0 0 280px; /* увеличена ширина */
+  background: #e1e4e8;
+  padding: 1.5rem 2rem;
+  border-radius: 8px;
+  height: fit-content;
+  font-size: 1.1rem; /* увеличенный шрифт */
+  transform: scale(1.05); /* небольшой масштаб */
+  transform-origin: top right;
+}
+
+aside nav a {
+  display: block;
+  color: #24292e;
+  text-decoration: none;
+  padding: 0.5rem 0;
+  font-weight: 700;
+  border-left: 5px solid transparent; /* увеличена толщина */
+  transition: border-color 0.3s ease, background-color 0.3s ease;
+  border-radius: 3px;
+}
+
+aside nav a:hover {
+  border-left-color: #58a6ff;
+  background-color: #dbe9ff;
+}
+
+/* Хедер */
+header {
+  background: linear-gradient(90deg, #24292e, #2f363d);
+  color: white;
+  padding: 1.5rem 2rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+header h1 {
+  font-family: 'JetBrains Mono', monospace;
+  font-weight: 700;
+  font-size: 1.8rem;
+  margin: 0 0 0.5rem 0;
+}
+
+/* Навигация */
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+nav ul li a {
+  color: #c9d1d9;
+  text-decoration: none;
+  font-weight: 600;
+  padding: 0.3rem 0.6rem;
+  border-radius: 4px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+nav ul li a:hover,
+nav ul li a.active {
+  background-color: #58a6ff;
+  color: white;
+  text-decoration: none;
+}
+
+/* Футер */
+footer {
+  background-color: #24292e;
+  color: #c9d1d9;
+  text-align: center;
+  padding: 1rem 2rem;
+  font-size: 0.9rem;
+  box-shadow: 0 -2px 8px rgba(0,0,0,0.15);
+}
+
+footer a {
+  color: #58a6ff;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+/* Адаптивность */
+@media (max-width: 900px) {
+  main {
+    flex-direction: column;
+    margin: 1rem;
+  }
+  aside {
+    width: 100%;
+    margin-top: 1rem;
+    transform: none; /* убрать масштаб на мобильных */
+    font-size: 1rem;
+  }
+}
+/* Обертка для логотипа и меню - выстраиваем в строку */
+.logo-menu-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 1rem; /* расстояние между логотипом и меню */
+}
+
+/* Размер логотипа */
+.logo {
+  width: 40px; /* маленькое фото, можно изменить */
+  height: auto;
+  display: block;
+}
